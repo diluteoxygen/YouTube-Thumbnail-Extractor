@@ -2,6 +2,7 @@ const extractButton = document.getElementById('extract-button');
 const thumbnailContainer = document.getElementById('thumbnail-container');
 
 extractButton.addEventListener('click', () => {
+
   // Remove any existing thumbnail image and download button
   thumbnailContainer.innerHTML = '';
 
@@ -15,7 +16,9 @@ extractButton.addEventListener('click', () => {
 
   // Create a download button and append it to the thumbnail container
   const downloadButton = document.createElement('button');
-  downloadButton.innerHTML = 'Download';
+  const icon = document.createElement('i');
+  icon.className = 'fas fa-download';
+  downloadButton.appendChild(icon);
   downloadButton.addEventListener('click', () => {
     const link = document.createElement('a');
     link.href = thumbnailUrl;
