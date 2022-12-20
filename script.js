@@ -2,6 +2,10 @@ const extractButton = document.getElementById('extract-button');
 const thumbnailContainer = document.getElementById('thumbnail-container');
 
 extractButton.addEventListener('click', () => {
+  // Remove any existing thumbnail image
+  thumbnailContainer.innerHTML = '';
+
+  // Extract the thumbnail image from the new URL
   const url = document.getElementById('url').value;
   const videoId = getVideoId(url);
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;

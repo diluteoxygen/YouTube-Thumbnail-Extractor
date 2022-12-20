@@ -1,5 +1,16 @@
-body {
+/* "Dracula" theme colors */
+:root {
+    --dracula-background: #282a36;
+    --dracula-text: #f8f8f2;
+    --dracula-accent: #8be9fd;
+    --dracula-accent-hover: #50fa7b;
+  }
+  
+  body {
     font-family: sans-serif;
+    background-color: var(--dracula-background);
+    color: var(--dracula-text);
+    text-align: center;
   }
   
   input {
@@ -7,14 +18,16 @@ body {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid var(--dracula-accent);
     border-radius: 4px;
+    color: var(--dracula-text);
+    background-color: var(--dracula-background);
   }
   
   button {
     width: 20%;
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--dracula-accent);
+    color: #44475a;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -23,7 +36,7 @@ body {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: var(--dracula-accent-hover);
   }
   
   img {
